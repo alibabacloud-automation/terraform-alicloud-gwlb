@@ -27,6 +27,10 @@ Internet
 [Backend ECS Instances]
 ```
 
+## Cost Notice
+
+**Note:** This example will create real resources on Alibaba Cloud that may incur costs. Resources include VPC, VSwitches, ECS instances, Security Groups, and GWLB resources (Load Balancer, Server Group, and Listener). Please ensure you understand the pricing before running this example. Remember to run `terraform destroy` to clean up resources when you're done.
+
 ## Usage
 
 To run this example:
@@ -67,29 +71,6 @@ To run this example:
    ```bash
    terraform destroy
    ```
-
-## Configuration
-
-### Required Variables
-
-None. All variables have sensible defaults.
-
-### Optional Variables
-
-- `vpc_name`: Name of the VPC (default: "gwlb-example-vpc")
-- `vpc_cidr`: CIDR block for the VPC (default: "10.0.0.0/8")
-- `vswitch_configs`: List of VSwitch configurations
-- `instance_count`: Number of backend ECS instances (default: 3)
-- `gwlb_name`: Name of the GWLB load balancer (default: "gwlb-example")
-- `tags`: Map of tags to assign to resources
-
-### Outputs
-
-This example outputs:
-- VPC and VSwitch information
-- Security Group ID
-- ECS instance details
-- Complete GWLB setup information including load balancer, server group, and listener details
 
 ## Notes
 
